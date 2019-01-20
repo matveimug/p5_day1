@@ -10,6 +10,7 @@ window.onresize = function() {
 };
 let d = 0;
 let x, y, nx, ny;
+let distX, distY;
 
 window.onmousemove = function(){
     d = random(20, 200);
@@ -22,7 +23,11 @@ function setup() {
 }
 
 function draw() {
-
+    distX = Math.abs(screenW - (screenW/2 + mouseX));
+    distY = Math.abs(screenH - (screenH/2 + mouseY));
+    console.clear();
+    console.log(distX);
+    console.log(distY);
     strokeWeight(3);
     if (mouseIsPressed) {
         fill(0);
@@ -32,8 +37,8 @@ function draw() {
     } else {
         fill(255);
         stroke(0);
-        x = mouseX;
-        y = mouseY;
+        x = mouseX + nx * distX / screenW * 2;
+        y = mouseY + ny * distY / screenH * 2;
     }
     ellipse(x, y, d, d);
     ellipse(screenW - x, screenH - y, d, d);
