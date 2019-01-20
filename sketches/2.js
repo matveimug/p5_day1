@@ -13,8 +13,19 @@ window.onmousemove = function(){
 };
 
 function setup() {
-    const grid = 20;
     createCanvas(screenW, screenH);
+
+}
+
+let divH = screenH / 10;
+let divW = screenW / 10;
+
+function draw() {
+    clear();
+    // const context = canvas.getContext('2d');
+    // context.clearRect(0, 0, canvas.width, canvas.height);
+    const grid = 20;
+
     stroke('rgba(0,0,255,.1)');
     strokeWeight(1);
     for (let i = 1; i <= divH; i++) {
@@ -23,13 +34,8 @@ function setup() {
     for (let i = 1; i <= divW; i++) {
         line(i * grid, 0, i * grid, screenH);
     }
-}
-
-let divH = screenH / 10;
-let divW = screenW / 10;
-
-function draw() {
-    // clear();
+    stroke('rgb(0,0,255)');
+    strokeWeight(4);
     let x1 = 100;
     let y1 = 1 * x1;
     let x2 = x1;
@@ -38,6 +44,4 @@ function draw() {
         line(i * x1, y1, i * x2, y2);
         rotate(mouseX);
     }
-    stroke('rgb(0,0,255)');
-    strokeWeight(4);
 }
