@@ -13,7 +13,7 @@ let bugs = []; // array of Jitter objects
 function setup() {
     createCanvas(screenW, screenH);
     // Create objects
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
         bugs.push(new Jotter());
         bugs.push(new Jitter());
     }
@@ -32,7 +32,7 @@ class Jitter {
     constructor() {
         this.x = random(width);
         this.y = random(height);
-        this.diameter = random(1, 300);
+        this.diameter = random(0, 300);
         this.speed = 1;
     }
 
@@ -43,7 +43,6 @@ class Jitter {
 
     display() {
         push();
-        strokeWeight(3);
         ellipse(this.x, this.y, this.diameter, this.diameter);
         pop();
     }
@@ -52,7 +51,7 @@ class Jotter {
     constructor() {
         this.x = random(width);
         this.y = random(height);
-        this.diameter = random(0, 100);
+        this.diameter = random(0, 300);
         this.speed = 1;
     }
 
@@ -64,7 +63,7 @@ class Jotter {
     display() {
         push();
         noStroke();
-        fill(255,0,0);
+        fill(255,255,0);
         ellipse(this.x, this.y, this.diameter, this.diameter);
         pop();
     }
