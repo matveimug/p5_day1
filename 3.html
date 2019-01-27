@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5 II</title>
+  <style>
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    body * {
+      margin: 0;
+    }
+
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    main {
+      background: black;
+      color: white;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    section {
+      display: flex;
+      max-width: 40em;
+      width: 100%;
+      padding: 1em;
+    }
+
+    section > * {
+      flex: 1;
+    }
+
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .left > *, .right > * {
+    }
+
+    .right {
+      text-align: right;
+    }
+    h1 {
+    }
+    label {
+      opacity: .4;
+      font-size: x-small;
+      font-weight: bold;
+    }
+  </style>
+  <script src="p5.min.js"></script>
+  <script src="addons/p5.dom.min.js"></script>
+  <script src="addons/p5.sound.min.js"></script>
+  <script src="sketches/3.js"></script>
+
+</head>
+<body>
+<main>
+  <section>
+    <div class="left">
+      <h1>III</h1>
+      <label>p5.js</label>
+    </div>
+    <div class="right">
+      <h1>27.01.2019</h1>
+      <label>Pühapäev</label>
+    </div>
+  </section>
+</main>
+</body>
+</html>

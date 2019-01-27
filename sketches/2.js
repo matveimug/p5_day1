@@ -7,14 +7,10 @@ window.onresize = function() {
     // setup()
 };
 
-
-window.onmousemove = function(){
-
-};
-
 function setup() {
     createCanvas(screenW, screenH);
     rectMode(CENTER);
+    // noLoop();
 }
 
 let divH = screenH / 10;
@@ -22,12 +18,21 @@ let divW = screenW / 10;
 
 const lineLength = 100;
 
+let arr = [];
+function populatr(count) {
+    for (let i = 1; i <= count; i++) {
+        arr.push(Math.random());
+    }
+}
+populatr(screenH / lineLength + 1);
+populatr(screenW / lineLength);
+
 function drawLine(i, j) {
     let n = i * lineLength;
     push();
     strokeWeight(20);
     let deg = (mouseX + mouseY) / 2;
-    let rad = -PI/4 + radians(deg) + (1 - i) + (1 - j);
+    let rad = -PI/4 + radians(deg) + (1 - i) + (1 - j) + arr[i];
     let r = rad;
     let hue = Math.round(deg * 2 / (screenH + screenW) * i * 10 + j * 10);
     translate(n, lineLength);
