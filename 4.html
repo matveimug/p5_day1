@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5 IV</title>
+  <style>
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      font-family: 'Helvetica', sans-serif;
+      color: DimGray;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    body * {
+      margin: 0;
+    }
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    main {
+      /*background: white;*/
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    section {
+      display: flex;
+      /*max-width: 40em;*/
+      width: 100%;
+      padding: 1em;
+    }
+    section > * {
+      flex: 1;
+    }
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .left > *, .right > * {
+    }
+
+    .right {
+      text-align: right;
+    }
+    h2 {
+      opacity: .4;
+    }
+  </style>
+  <script src="p5.min.js"></script>
+  <script src="addons/p5.dom.min.js"></script>
+  <script src="addons/p5.sound.min.js"></script>
+  <script src="sketches/4.js"></script>
+
+</head>
+<body>
+<main>
+  <section>
+    <div class="left">
+      <h1>4</h1>
+    </div>
+    <div class="right">
+      <h2>28.01.2019</h2>
+    </div>
+  </section>
+</main>
+</body>
+</html>
